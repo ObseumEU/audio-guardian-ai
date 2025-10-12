@@ -5,7 +5,7 @@ const benefits = [
   {
     icon: Target,
     title: "Multi-Engine Accuracy",
-    description: "Combines ACRCloud + Shazam-based fallback with Spotify verification for higher confidence detections.",
+    description: "Leverages massive fingerprint databases with millions of track records and intelligent verification for higher confidence detections.",
   },
   {
     icon: Zap,

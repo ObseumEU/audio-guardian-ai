@@ -1,8 +1,8 @@
-import { Disc3, Music2, MessageSquare, Activity, Container, Eye } from "lucide-react";
+import { Database, Music2, MessageSquare, Activity, Container, Eye } from "lucide-react";
 
 const integrations = [
-  { icon: Disc3, name: "ACRCloud", category: "Recognition" },
-  { icon: Music2, name: "Shazam-based", category: "Recognition" },
+  { icon: Database, name: "Fingerprint Database", category: "Recognition" },
+  { icon: Music2, name: "Millions of Tracks", category: "Audio Library" },
   { icon: Music2, name: "Spotify", category: "Verification" },
   { icon: MessageSquare, name: "RabbitMQ", category: "Messaging" },
   { icon: Container, name: ".NET Aspire", category: "Orchestration" },
