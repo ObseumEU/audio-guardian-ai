@@ -18,8 +18,8 @@ const features = [
   },
   {
     icon: Globe,
-    title: "Automatic Delivery",
-    description: "Reports sent to your endpoint plus local archival for compliance",
+    title: "Auto-Report to Authorities",
+    description: "Automatically submit copyright violation reports to rights authorities and enforcement agencies with timestamped evidence",
   },
   {
     icon: Trash2,

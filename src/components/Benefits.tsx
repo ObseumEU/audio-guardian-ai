@@ -14,8 +14,8 @@ const benefits = [
   },
   {
     icon: Shield,
-    title: "End-to-End Automation",
-    description: "From ingest to report delivery with zero manual steps. Full observability with health checks and metrics.",
+    title: "Automated Copyright Protection",
+    description: "From detection to authority reporting with zero manual steps. Automatically submit copyright findings to rights organizations and enforcement agencies.",
   },
   {
     icon: TrendingUp,

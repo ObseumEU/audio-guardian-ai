@@ -23,7 +23,7 @@ export const Hero = () => {
             
             <p className="text-xl text-muted-foreground max-w-2xl">
               End-to-end audio recognition pipeline built for publishers, broadcasters, and UGC platforms. 
-              Generate clear, actionable reports and stay compliant without slowing your team down.
+              Automatically detect copyrighted music, generate compliance reports, and submit findings to rights authorities—keeping you protected and compliant without manual intervention.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
@@ -38,7 +38,7 @@ export const Hero = () => {
             
             <div className="flex items-center gap-8 pt-8 border-t border-border">
               <div>
-                <div className="text-3xl font-bold text-primary">99.8%</div>
+                <div className="text-3xl font-bold text-primary">98%</div>
                 <div className="text-sm text-muted-foreground">Accuracy Rate</div>
               </div>
               <div>
