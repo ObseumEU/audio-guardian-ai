@@ -4,7 +4,6 @@ import { Benefits } from "@/components/Benefits";
 import { HowItWorks } from "@/components/HowItWorks";
 import { Features } from "@/components/Features";
 import { TargetAudience } from "@/components/TargetAudience";
-import { Integrations } from "@/components/Integrations";
 import { CTA } from "@/components/CTA";
 import { Footer } from "@/components/Footer";
 
@@ -18,7 +17,6 @@ const Index = () => {
         <HowItWorks />
         <Features />
         <TargetAudience />
-        <Integrations />
         <CTA />
       </main>
       <Footer />
