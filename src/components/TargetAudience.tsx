@@ -1,37 +1,40 @@
 import { Newspaper, Radio, Users, Scale } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-
-const audiences = [
-  {
-    icon: Newspaper,
-    title: "Website Compliance",
-    description: "Automatically scan all audio content on your website and ensure full copyright compliance with automated reporting to authorities.",
-  },
-  {
-    icon: Radio,
-    title: "Database Auditing",
-    description: "Continuously monitor your audio databases for copyrighted content and maintain legal compliance with real-time alerts.",
-  },
-  {
-    icon: Users,
-    title: "Corporate Legal Protection",
-    description: "Protect your organization from copyright infringement lawsuits with automated detection and authority reporting.",
-  },
-  {
-    icon: Scale,
-    title: "Regulatory Compliance",
-    description: "Stay compliant with copyright laws across jurisdictions through automatic submission of findings to regulatory bodies.",
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const TargetAudience = () => {
+  const { t } = useLanguage();
+  
+  const audiences = [
+    {
+      icon: Newspaper,
+      title: t.targetAudience.case1Title,
+      description: t.targetAudience.case1Desc,
+    },
+    {
+      icon: Radio,
+      title: t.targetAudience.case2Title,
+      description: t.targetAudience.case2Desc,
+    },
+    {
+      icon: Users,
+      title: t.targetAudience.case3Title,
+      description: t.targetAudience.case3Desc,
+    },
+    {
+      icon: Scale,
+      title: t.targetAudience.case4Title,
+      description: t.targetAudience.case4Desc,
+    },
+  ];
+
   return (
     <section className="py-24 bg-secondary/20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold">Business Use Cases</h2>
+          <h2 className="text-4xl md:text-5xl font-bold">{t.targetAudience.title}</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Automatic copyright compliance across your entire digital infrastructure
+            {t.targetAudience.subtitle}
           </p>
         </div>
         

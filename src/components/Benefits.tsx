@@ -1,39 +1,42 @@
 import { Zap, Target, Shield, TrendingUp } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-
-const benefits = [
-  {
-    icon: Target,
-    title: "Risk Mitigation",
-    description: "Prevent costly lawsuits and regulatory fines by proactively identifying copyright violations before they become legal issues.",
-  },
-  {
-    icon: Zap,
-    title: "Save Time & Resources",
-    description: "Eliminate manual content reviews and free your team to focus on core business activities while maintaining full compliance.",
-  },
-  {
-    icon: Shield,
-    title: "Complete Protection",
-    description: "Comprehensive coverage across all your digital assets with automatic reporting to authorities—ensuring you're always compliant.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Business Continuity",
-    description: "Avoid content takedowns, platform penalties, and reputation damage that can disrupt your operations and revenue.",
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const Benefits = () => {
+  const { t } = useLanguage();
+  
+  const benefits = [
+    {
+      icon: Target,
+      title: t.benefits.benefit1Title,
+      description: t.benefits.benefit1Desc,
+    },
+    {
+      icon: Zap,
+      title: t.benefits.benefit2Title,
+      description: t.benefits.benefit2Desc,
+    },
+    {
+      icon: Shield,
+      title: t.benefits.benefit3Title,
+      description: t.benefits.benefit3Desc,
+    },
+    {
+      icon: TrendingUp,
+      title: t.benefits.benefit4Title,
+      description: t.benefits.benefit4Desc,
+    },
+  ];
+
   return (
     <section className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold">
-            Why <span className="text-primary">Corporates</span>
+            {t.benefits.title} <span className="text-primary">{t.benefits.titleHighlight}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Built for scale, designed for reliability, optimized for your workflow
+            {t.benefits.subtitle}
           </p>
         </div>
         

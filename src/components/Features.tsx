@@ -1,46 +1,49 @@
 import { Clock, Database, CheckCircle2, Trash2, Globe, BarChart3 } from "lucide-react";
-
-const features = [
-  {
-    icon: Clock,
-    title: "Reduce Legal Exposure",
-    description: "Identify and address copyright issues before they result in lawsuits, penalties, or cease-and-desist orders",
-  },
-  {
-    icon: Database,
-    title: "Protect Your Reputation",
-    description: "Maintain your brand integrity by ensuring all published content is fully compliant with copyright laws",
-  },
-  {
-    icon: CheckCircle2,
-    title: "Cost Savings",
-    description: "Avoid expensive legal fees, settlement costs, and content removal penalties through proactive compliance",
-  },
-  {
-    icon: Globe,
-    title: "Regulatory Compliance",
-    description: "Automated reporting to authorities ensures you meet all legal requirements across jurisdictions",
-  },
-  {
-    icon: Trash2,
-    title: "Peace of Mind",
-    description: "Sleep better knowing your entire content library is continuously monitored and compliant",
-  },
-  {
-    icon: BarChart3,
-    title: "Executive Insights",
-    description: "Clear reporting and dashboards showing your compliance status and risk reduction metrics",
-  },
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const Features = () => {
+  const { t } = useLanguage();
+  
+  const features = [
+    {
+      icon: Clock,
+      title: t.features.feature1Title,
+      description: t.features.feature1Desc,
+    },
+    {
+      icon: Database,
+      title: t.features.feature2Title,
+      description: t.features.feature2Desc,
+    },
+    {
+      icon: CheckCircle2,
+      title: t.features.feature3Title,
+      description: t.features.feature3Desc,
+    },
+    {
+      icon: Globe,
+      title: t.features.feature4Title,
+      description: t.features.feature4Desc,
+    },
+    {
+      icon: Trash2,
+      title: t.features.feature5Title,
+      description: t.features.feature5Desc,
+    },
+    {
+      icon: BarChart3,
+      title: t.features.feature6Title,
+      description: t.features.feature6Desc,
+    },
+  ];
+
   return (
     <section className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold">Business Benefits</h2>
+          <h2 className="text-4xl md:text-5xl font-bold">{t.features.title}</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Tangible value for your organization
+            {t.features.subtitle}
           </p>
         </div>
         

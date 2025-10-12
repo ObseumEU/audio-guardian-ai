@@ -1,6 +1,9 @@
 import { Disc3 } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const Footer = () => {
+  const { t } = useLanguage();
+  
   return (
     <footer className="py-12 bg-card border-t border-border">
       <div className="container mx-auto px-4">
@@ -11,8 +14,8 @@ export const Footer = () => {
           </div>
           
           <div className="text-sm text-muted-foreground text-center md:text-right">
-            <p>© 2025 RightsGuard. All rights reserved.</p>
-            <p className="mt-1">Business copyright protection & compliance</p>
+            <p>{t.footer.copyright}</p>
+            <p className="mt-1">{t.footer.tagline}</p>
           </div>
         </div>
       </div>

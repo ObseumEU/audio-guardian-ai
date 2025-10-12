@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export const Hero = () => {
+  const { t } = useLanguage();
+  
   return (
     <section className="relative overflow-hidden bg-hero-gradient min-h-screen flex items-center">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background pointer-events-none" />
@@ -12,41 +15,41 @@ export const Hero = () => {
           <div className="space-y-8 animate-fade-in">
             <div className="inline-block">
               <span className="px-4 py-2 bg-primary/10 border border-primary/30 rounded-full text-sm font-medium text-primary">
-                AI-Powered Copyright Detection
+                {t.hero.badge}
               </span>
             </div>
             
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              Protect Your Business from{" "}
-              <span className="text-primary">Copyright Risk</span>
+              {t.hero.title}{" "}
+              <span className="text-primary">{t.hero.titleHighlight}</span>
             </h1>
             
             <p className="text-xl text-muted-foreground max-w-2xl">
-              Eliminate copyright violations across your digital content. Automated detection and regulatory reporting keeps your business compliant and protected from costly legal disputes.
+              {t.hero.description}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Button variant="hero" size="lg">
-                Request a Demo
+                {t.hero.requestDemo}
                 <ArrowRight className="ml-2" />
               </Button>
               <Button variant="outline" size="lg">
-                View Documentation
+                {t.hero.viewDocs}
               </Button>
             </div>
             
             <div className="flex items-center gap-8 pt-8 border-t border-border">
               <div>
-                <div className="text-3xl font-bold text-primary">98%</div>
-                <div className="text-sm text-muted-foreground">Detection Rate</div>
+                <div className="text-3xl font-bold text-primary">{t.hero.stat1Value}</div>
+                <div className="text-sm text-muted-foreground">{t.hero.stat1Label}</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-primary">$0</div>
-                <div className="text-sm text-muted-foreground">Legal Penalties</div>
+                <div className="text-3xl font-bold text-primary">{t.hero.stat2Value}</div>
+                <div className="text-sm text-muted-foreground">{t.hero.stat2Label}</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-primary">100%</div>
-                <div className="text-sm text-muted-foreground">Compliant</div>
+                <div className="text-3xl font-bold text-primary">{t.hero.stat3Value}</div>
+                <div className="text-sm text-muted-foreground">{t.hero.stat3Label}</div>
               </div>
             </div>
           </div>
