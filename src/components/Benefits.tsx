@@ -30,7 +30,7 @@ export const Benefits = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold">
-            Why Teams Choose <span className="text-primary">CopyrightAnalyzer</span>
+            Why <span className="text-primary">Corporates</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Built for scale, designed for reliability, optimized for your workflow
