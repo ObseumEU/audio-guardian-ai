@@ -2,9 +2,12 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useState } from "react";
+import { ContactDialog } from "./ContactDialog";
 
 export const Hero = () => {
   const { t } = useLanguage();
+  const [showContactDialog, setShowContactDialog] = useState(false);
   
   return (
     <section className="relative overflow-hidden bg-hero-gradient min-h-screen flex items-center">
@@ -29,11 +32,14 @@ export const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="hero" size="lg">
+              <Button variant="hero" size="lg" onClick={() => setShowContactDialog(true)}>
                 {t.hero.requestDemo}
                 <ArrowRight className="ml-2" />
               </Button>
-              <Button variant="outline" size="lg">
+              <Button variant="outline" size="lg" onClick={() => {
+                const featuresSection = document.getElementById('features');
+                featuresSection?.scrollIntoView({ behavior: 'smooth' });
+              }}>
                 {t.hero.viewDocs}
               </Button>
             </div>
@@ -64,6 +70,7 @@ export const Hero = () => {
           </div>
         </div>
       </div>
+      <ContactDialog open={showContactDialog} onOpenChange={setShowContactDialog} type="demo" />
     </section>
   );
 };

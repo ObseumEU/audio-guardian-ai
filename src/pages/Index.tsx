@@ -14,10 +14,10 @@ const Index = () => {
       <main className="pt-16">
         <Hero />
         <Benefits />
-        <HowItWorks />
-        <Features />
+        <HowItWorks id="how-it-works" />
+        <Features id="features" />
         <TargetAudience />
-        <CTA />
+        <CTA id="contact" />
       </main>
       <Footer />
     </div>

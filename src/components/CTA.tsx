@@ -1,12 +1,20 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useState } from "react";
+import { ContactDialog } from "./ContactDialog";
 
-export const CTA = () => {
+interface CTAProps {
+  id?: string;
+}
+
+export const CTA = ({ id }: CTAProps) => {
   const { t } = useLanguage();
+  const [showDemoDialog, setShowDemoDialog] = useState(false);
+  const [showCallDialog, setShowCallDialog] = useState(false);
   
   return (
-    <section className="py-24 bg-hero-gradient relative overflow-hidden">
+    <section id={id} className="py-24 bg-hero-gradient relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/50" />
       
       <div className="container mx-auto px-4 relative z-10">
@@ -20,12 +28,12 @@ export const CTA = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-            <Button variant="hero" size="lg">
+            <Button variant="hero" size="lg" onClick={() => setShowDemoDialog(true)}>
               <Mail className="mr-2" />
               {t.cta.requestDemo}
               <ArrowRight className="ml-2" />
             </Button>
-            <Button variant="outline" size="lg">
+            <Button variant="outline" size="lg" onClick={() => setShowCallDialog(true)}>
               {t.cta.scheduleCall}
             </Button>
           </div>
@@ -35,6 +43,8 @@ export const CTA = () => {
           </div>
         </div>
       </div>
+      <ContactDialog open={showDemoDialog} onOpenChange={setShowDemoDialog} type="demo" />
+      <ContactDialog open={showCallDialog} onOpenChange={setShowCallDialog} type="call" />
     </section>
   );
 };

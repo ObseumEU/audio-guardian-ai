@@ -1,7 +1,11 @@
 import { Clock, Database, CheckCircle2, Trash2, Globe, BarChart3 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-export const Features = () => {
+interface FeaturesProps {
+  id?: string;
+}
+
+export const Features = ({ id }: FeaturesProps) => {
   const { t } = useLanguage();
   
   const features = [
@@ -38,7 +42,7 @@ export const Features = () => {
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section id={id} className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold">{t.features.title}</h2>

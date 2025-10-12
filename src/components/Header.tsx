@@ -3,10 +3,12 @@ import { Disc3, Menu, X } from "lucide-react";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useState } from "react";
+import { ContactDialog } from "./ContactDialog";
 
 export const Header = () => {
   const { t } = useLanguage();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showContactDialog, setShowContactDialog] = useState(false);
   
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
@@ -29,7 +31,7 @@ export const Header = () => {
               {t.nav.contact}
             </a>
             <LanguageSwitcher />
-            <Button variant="hero">
+            <Button variant="hero" onClick={() => setShowContactDialog(true)}>
               {t.hero.requestDemo}
             </Button>
           </nav>
@@ -76,13 +78,17 @@ export const Header = () => {
               <div className="py-2">
                 <LanguageSwitcher />
               </div>
-              <Button variant="hero" className="w-full">
+              <Button variant="hero" className="w-full" onClick={() => {
+                setShowContactDialog(true);
+                setIsMenuOpen(false);
+              }}>
                 {t.hero.requestDemo}
               </Button>
             </div>
           </nav>
         )}
       </div>
+      <ContactDialog open={showContactDialog} onOpenChange={setShowContactDialog} type="demo" />
     </header>
   );
 };

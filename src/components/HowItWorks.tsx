@@ -1,7 +1,11 @@
 import { Download, Scissors, ScanSearch, FileText, ArrowRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-export const HowItWorks = () => {
+interface HowItWorksProps {
+  id?: string;
+}
+
+export const HowItWorks = ({ id }: HowItWorksProps) => {
   const { t } = useLanguage();
   
   const steps = [
@@ -28,7 +32,7 @@ export const HowItWorks = () => {
   ];
 
   return (
-    <section className="py-24 bg-secondary/30">
+    <section id={id} className="py-24 bg-secondary/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold">{t.howItWorks.title}</h2>
