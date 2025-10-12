@@ -4,23 +4,23 @@ import { Card, CardContent } from "@/components/ui/card";
 const benefits = [
   {
     icon: Target,
-    title: "Multi-Engine Accuracy",
-    description: "Leverages massive fingerprint databases with millions of track records and intelligent verification for higher confidence detections.",
+    title: "Risk Mitigation",
+    description: "Prevent costly lawsuits and regulatory fines by proactively identifying copyright violations before they become legal issues.",
   },
   {
     icon: Zap,
-    title: "Fast & Scalable",
-    description: "Splits audio into chunks and processes in parallel. Handle thousands of videos without slowdown.",
+    title: "Save Time & Resources",
+    description: "Eliminate manual content reviews and free your team to focus on core business activities while maintaining full compliance.",
   },
   {
     icon: Shield,
-    title: "Automated Copyright Protection",
-    description: "From detection to authority reporting with zero manual steps. Automatically submit copyright findings to rights organizations and enforcement agencies.",
+    title: "Complete Protection",
+    description: "Comprehensive coverage across all your digital assets with automatic reporting to authorities—ensuring you're always compliant.",
   },
   {
     icon: TrendingUp,
-    title: "Production Ready",
-    description: "OpenTelemetry metrics, robust retries, and automatic storage garbage collection out-of-the-box.",
+    title: "Business Continuity",
+    description: "Avoid content takedowns, platform penalties, and reputation damage that can disrupt your operations and revenue.",
   },
 ];
 

@@ -17,13 +17,12 @@ export const Hero = () => {
             </div>
             
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              Detect Copyrighted Music at{" "}
-              <span className="text-primary">Scale</span>
+              Protect Your Business from{" "}
+              <span className="text-primary">Copyright Risk</span>
             </h1>
             
             <p className="text-xl text-muted-foreground max-w-2xl">
-              End-to-end audio recognition pipeline built for publishers, broadcasters, and UGC platforms. 
-              Automatically detect copyrighted music, generate compliance reports, and submit findings to rights authorities—keeping you protected and compliant without manual intervention.
+              Eliminate copyright violations across your digital content. Automated detection and regulatory reporting keeps your business compliant and protected from costly legal disputes.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
@@ -39,15 +38,15 @@ export const Hero = () => {
             <div className="flex items-center gap-8 pt-8 border-t border-border">
               <div>
                 <div className="text-3xl font-bold text-primary">98%</div>
-                <div className="text-sm text-muted-foreground">Accuracy Rate</div>
+                <div className="text-sm text-muted-foreground">Detection Rate</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-primary">10M+</div>
-                <div className="text-sm text-muted-foreground">Videos Scanned</div>
+                <div className="text-3xl font-bold text-primary">$0</div>
+                <div className="text-sm text-muted-foreground">Legal Penalties</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-primary">24/7</div>
-                <div className="text-sm text-muted-foreground">Automated</div>
+                <div className="text-3xl font-bold text-primary">100%</div>
+                <div className="text-sm text-muted-foreground">Compliant</div>
               </div>
             </div>
           </div>

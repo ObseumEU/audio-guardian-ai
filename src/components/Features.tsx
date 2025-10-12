@@ -3,33 +3,33 @@ import { Clock, Database, CheckCircle2, Trash2, Globe, BarChart3 } from "lucide-
 const features = [
   {
     icon: Clock,
-    title: "Timestamped Detections",
-    description: "Per-track confidence scores and exact duration mapping for every match",
+    title: "Reduce Legal Exposure",
+    description: "Identify and address copyright issues before they result in lawsuits, penalties, or cease-and-desist orders",
   },
   {
     icon: Database,
-    title: "Metadata Consolidation",
-    description: "Label, artist, and track data verified across Spotify and Deezer",
+    title: "Protect Your Reputation",
+    description: "Maintain your brand integrity by ensuring all published content is fully compliant with copyright laws",
   },
   {
     icon: CheckCircle2,
-    title: "Intelligent Fallback",
-    description: "Automatic secondary engine when primary recognition is uncertain",
+    title: "Cost Savings",
+    description: "Avoid expensive legal fees, settlement costs, and content removal penalties through proactive compliance",
   },
   {
     icon: Globe,
-    title: "Auto-Report to Authorities",
-    description: "Automatically submit copyright violation reports to rights authorities and enforcement agencies with timestamped evidence",
+    title: "Regulatory Compliance",
+    description: "Automated reporting to authorities ensures you meet all legal requirements across jurisdictions",
   },
   {
     icon: Trash2,
-    title: "Storage Hygiene",
-    description: "Built-in garbage collection to manage disk space automatically",
+    title: "Peace of Mind",
+    description: "Sleep better knowing your entire content library is continuously monitored and compliant",
   },
   {
     icon: BarChart3,
-    title: "Full Observability",
-    description: "OpenTelemetry integration with Sentry and health endpoints",
+    title: "Executive Insights",
+    description: "Clear reporting and dashboards showing your compliance status and risk reduction metrics",
   },
 ];
 
@@ -38,9 +38,9 @@ export const Features = () => {
     <section className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold">Key Features</h2>
+          <h2 className="text-4xl md:text-5xl font-bold">Business Benefits</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Everything you need for enterprise-grade copyright compliance
+            Tangible value for your organization
           </p>
         </div>
         

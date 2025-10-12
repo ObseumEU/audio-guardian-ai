@@ -9,7 +9,7 @@ export const CTA = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-            Ready to Streamline Your Copyright Compliance?
+            Protect Your Business Today
           </h2>
           
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -29,7 +29,7 @@ export const CTA = () => {
           </div>
           
           <div className="pt-8 text-sm text-muted-foreground">
-            <p>Cloud or on-prem deployment • Independent scalable services • Full observability</p>
+            <p>Flexible deployment options • Scales with your business • Full compliance guarantee</p>
           </div>
         </div>
       </div>
