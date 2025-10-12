@@ -3,23 +3,23 @@ import { Download, Scissors, ScanSearch, FileText, ArrowRight } from "lucide-rea
 const steps = [
   {
     icon: Download,
-    title: "Ingest",
-    description: "Pulls videos from your feed or local storage",
+    title: "Scan",
+    description: "Automatically scan your website content, databases, or video feeds for copyrighted audio",
   },
   {
     icon: Scissors,
-    title: "Extract & Split",
-    description: "Uses FFmpeg to isolate audio and segment into smart chunks",
+    title: "Analyze",
+    description: "Match audio against millions of fingerprint records with high precision detection",
   },
   {
     icon: ScanSearch,
-    title: "Recognize",
-    description: "Identifies tracks via recognition engines and verifies metadata",
+    title: "Identify",
+    description: "Verify copyright ownership, labels, and licensing status across multiple databases",
   },
   {
     icon: FileText,
-    title: "Report",
-    description: "Aggregates matches, scores confidence, and delivers structured rights report",
+    title: "Report to Authorities",
+    description: "Automatically submit compliance reports to rights organizations and regulatory bodies",
   },
 ];
 

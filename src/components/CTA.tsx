@@ -13,8 +13,8 @@ export const CTA = () => {
           </h2>
           
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Tell us your current video workflow and we'll map the best setup for your team. 
-            Get faster reviews, fewer manual checks, and a stronger compliance posture.
+            Protect your business from copyright violations with automated scanning of all your digital assets. 
+            From websites to databases—we detect, report, and keep you compliant with authorities automatically.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">

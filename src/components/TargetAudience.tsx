@@ -4,23 +4,23 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 const audiences = [
   {
     icon: Newspaper,
-    title: "Publishers & Newsrooms",
-    description: "Distribute video content at scale while maintaining copyright compliance across all platforms.",
+    title: "Website Compliance",
+    description: "Automatically scan all audio content on your website and ensure full copyright compliance with automated reporting to authorities.",
   },
   {
     icon: Radio,
-    title: "Broadcasters & Streaming",
-    description: "Manage rights risk across live and on-demand content with automated pre-publish checks.",
+    title: "Database Auditing",
+    description: "Continuously monitor your audio databases for copyrighted content and maintain legal compliance with real-time alerts.",
   },
   {
     icon: Users,
-    title: "UGC Platforms",
-    description: "Screen user-generated content for copyrighted music before it goes live on your platform.",
+    title: "Corporate Legal Protection",
+    description: "Protect your organization from copyright infringement lawsuits with automated detection and authority reporting.",
   },
   {
     icon: Scale,
-    title: "Rights & Legal Teams",
-    description: "Generate defensible, timestamped evidence for takedowns or revenue sharing negotiations.",
+    title: "Regulatory Compliance",
+    description: "Stay compliant with copyright laws across jurisdictions through automatic submission of findings to regulatory bodies.",
   },
 ];
 
@@ -29,9 +29,9 @@ export const TargetAudience = () => {
     <section className="py-24 bg-secondary/20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold">Built For</h2>
+          <h2 className="text-4xl md:text-5xl font-bold">Business Use Cases</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Trusted by teams who need reliable, scalable copyright detection
+            Automatic copyright compliance across your entire digital infrastructure
           </p>
         </div>
         
