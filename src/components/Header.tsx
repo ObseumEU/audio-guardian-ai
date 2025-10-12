@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { Disc3 } from "lucide-react";
+import { Disc3, Menu, X } from "lucide-react";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useState } from "react";
 
 export const Header = () => {
   const { t } = useLanguage();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
@@ -15,6 +17,7 @@ export const Header = () => {
             <span className="text-xl font-bold">RightsGuard</span>
           </div>
           
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             <a href="#features" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
               {t.nav.features}
@@ -30,7 +33,55 @@ export const Header = () => {
               {t.hero.requestDemo}
             </Button>
           </nav>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden p-2"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
+          </button>
         </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <nav className="md:hidden py-4 border-t border-border bg-background/95 backdrop-blur-lg">
+            <div className="flex flex-col gap-4">
+              <a 
+                href="#features" 
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t.nav.features}
+              </a>
+              <a 
+                href="#how-it-works" 
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t.nav.howItWorks}
+              </a>
+              <a 
+                href="#contact" 
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t.nav.contact}
+              </a>
+              <div className="py-2">
+                <LanguageSwitcher />
+              </div>
+              <Button variant="hero" className="w-full">
+                {t.hero.requestDemo}
+              </Button>
+            </div>
+          </nav>
+        )}
       </div>
     </header>
   );
