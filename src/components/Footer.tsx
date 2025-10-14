@@ -20,9 +20,21 @@ export const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">{t.footer.solutionsTitle}</h4>
             <ul className="space-y-2 text-muted-foreground">
-              <li>{t.footer.solution1}</li>
-              <li>{t.footer.solution2}</li>
-              <li>{t.footer.solution3}</li>
+              <li>
+                <a href="https://obseum.cz" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                  {t.footer.solution1}
+                </a>
+              </li>
+              <li>
+                <a href="https://obseum.cz" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                  {t.footer.solution2}
+                </a>
+              </li>
+              <li>
+                <a href="https://obseum.cz" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                  {t.footer.solution3}
+                </a>
+              </li>
             </ul>
           </div>
 
