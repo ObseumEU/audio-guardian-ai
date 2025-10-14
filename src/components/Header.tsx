@@ -16,7 +16,7 @@ export const Header = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-2">
             <Disc3 className="w-8 h-8 text-primary" />
-            <span className="text-xl font-bold">Sentinel</span>
+            <span className="text-xl font-bold">Audexia</span>
           </div>
           
           {/* Desktop Navigation */}
