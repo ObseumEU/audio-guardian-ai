@@ -26,8 +26,8 @@ const translations = {
       stat1Label: 'Detection Accuracy',
       stat2Value: '$0',
       stat2Label: 'In Legal Fees',
-      stat3Value: '100%',
-      stat3Label: 'Compliance Rate',
+      stat3Value: '24/7',
+      stat3Label: 'Protection',
     },
     benefits: {
       title: 'Why Choose',
@@ -120,8 +120,8 @@ const translations = {
       stat1Label: 'Míra detekce',
       stat2Value: '0 Kč',
       stat2Label: 'Právní pokuty',
-      stat3Value: '100%',
-      stat3Label: 'V souladu',
+      stat3Value: '24/7',
+      stat3Label: 'Ochrana',
     },
     benefits: {
       title: 'Proč zvolit',
