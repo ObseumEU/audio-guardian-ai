@@ -21,13 +21,34 @@ export const Header = () => {
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <a href="#features" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+            <a 
+              href="#features" 
+              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               {t.nav.features}
             </a>
-            <a href="#how-it-works" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+            <a 
+              href="#how-it-works" 
+              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               {t.nav.howItWorks}
             </a>
-            <a href="#contact" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+            <a 
+              href="#contact" 
+              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               {t.nav.contact}
             </a>
             <LanguageSwitcher />
@@ -56,22 +77,34 @@ export const Header = () => {
             <div className="flex flex-col gap-4">
               <a 
                 href="#features" 
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
-                onClick={() => setIsMenuOpen(false)}
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors py-2"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsMenuOpen(false);
+                  document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
+                }}
               >
                 {t.nav.features}
               </a>
               <a 
                 href="#how-it-works" 
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
-                onClick={() => setIsMenuOpen(false)}
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors py-2"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsMenuOpen(false);
+                  document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
+                }}
               >
                 {t.nav.howItWorks}
               </a>
               <a 
                 href="#contact" 
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
-                onClick={() => setIsMenuOpen(false)}
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors py-2"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsMenuOpen(false);
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                }}
               >
                 {t.nav.contact}
               </a>
