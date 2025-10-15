@@ -37,8 +37,8 @@ export const Hero = () => {
                 <ArrowRight className="ml-2" />
               </Button>
               <Button variant="outline" size="lg" onClick={() => {
-                const featuresSection = document.getElementById('features');
-                featuresSection?.scrollIntoView({ behavior: 'smooth' });
+                const howItWorksSection = document.getElementById('how-it-works');
+                howItWorksSection?.scrollIntoView({ behavior: 'smooth' });
               }}>
                 {t.hero.viewDocs}
               </Button>

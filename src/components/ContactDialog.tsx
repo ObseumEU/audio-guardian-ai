@@ -31,12 +31,22 @@ export const ContactDialog = ({ open, onOpenChange, type = "demo" }: ContactDial
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Create WhatsApp message
+    const message = `New ${type === 'demo' ? 'Demo' : 'Call'} Request%0A%0AName: ${encodeURIComponent(formData.name)}%0AEmail: ${encodeURIComponent(formData.email)}%0ACompany: ${encodeURIComponent(formData.company || 'Not provided')}%0AMessage: ${encodeURIComponent(formData.message || 'Not provided')}`;
+    const phoneNumber = '420724676829';
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+    
+    // Open WhatsApp in new tab
+    window.open(whatsappUrl, '_blank');
+    
     toast({
-      title: language === 'en' ? "Request Sent!" : "Žádost odeslána!",
+      title: language === 'en' ? "Opening WhatsApp..." : "Otevírám WhatsApp...",
       description: language === 'en' 
-        ? "We'll get back to you as soon as possible." 
-        : "Ozveme se vám co nejdříve.",
+        ? "Your request will be sent via WhatsApp." 
+        : "Vaše žádost bude odeslána přes WhatsApp.",
     });
+    
     setFormData({ name: "", email: "", company: "", message: "" });
     onOpenChange(false);
   };
