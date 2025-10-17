@@ -91,7 +91,7 @@ const translations = {
       footer: 'Flexible deployment • Enterprise scalability • 100% compliance guarantee',
     },
     footer: {
-      brand: 'Obseum',
+      brand: 'Obseum s.r.o.',
       tagline: 'Your strategic technology partner for enterprise digital transformation and innovation excellence.',
       solutionsTitle: 'Solutions',
       solution1: 'Custom Software Development',
@@ -185,7 +185,7 @@ const translations = {
       footer: 'Flexibilní možnosti nasazení • Škáluje s vaším podnikáním • Plná záruka souladu',
     },
     footer: {
-      brand: 'Obseum',
+      brand: 'Obseum s.r.o.',
       tagline: 'Váš strategický technologický partner pro podnikovou digitální transformaci a inovační excelenci.',
       solutionsTitle: 'Řešení',
       solution1: 'Vývoj Vlastního Softwaru',
