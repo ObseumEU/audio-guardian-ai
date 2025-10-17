@@ -4,10 +4,11 @@ import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useState } from "react";
 import { ContactDialog } from "./ContactDialog";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 export const Header = () => {
   const { t } = useLanguage();
+  const navigate = useNavigate();
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showContactDialog, setShowContactDialog] = useState(false);
@@ -16,7 +17,10 @@ export const Header = () => {
   
   const scrollToSection = (sectionId: string) => {
     if (!isHomePage) {
-      window.location.href = `/#${sectionId}`;
+      navigate(`/#${sectionId}`);
+      setTimeout(() => {
+        document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
       return;
     }
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
@@ -33,42 +37,30 @@ export const Header = () => {
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <a 
-              href="#features" 
+            <button 
+              onClick={() => scrollToSection('features')}
               className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection('features');
-              }}
             >
               {t.nav.features}
-            </a>
-            <a 
-              href="#how-it-works" 
+            </button>
+            <button 
+              onClick={() => scrollToSection('how-it-works')}
               className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection('how-it-works');
-              }}
             >
               {t.nav.howItWorks}
-            </a>
+            </button>
             <Link 
               to="/faq" 
               className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
             >
               {t.nav.faq}
             </Link>
-            <a 
-              href="#contact" 
+            <button 
+              onClick={() => scrollToSection('contact')}
               className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection('contact');
-              }}
             >
               {t.nav.contact}
-            </a>
+            </button>
             <LanguageSwitcher />
             <Button variant="hero" onClick={() => setShowContactDialog(true)}>
               {t.hero.requestDemo}
@@ -93,28 +85,24 @@ export const Header = () => {
         {isMenuOpen && (
           <nav className="md:hidden py-4 border-t border-border bg-background/95 backdrop-blur-lg">
             <div className="flex flex-col gap-4">
-              <a 
-                href="#features" 
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors py-2"
-                onClick={(e) => {
-                  e.preventDefault();
+              <button 
+                onClick={() => {
                   setIsMenuOpen(false);
                   scrollToSection('features');
                 }}
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors py-2 text-left"
               >
                 {t.nav.features}
-              </a>
-              <a 
-                href="#how-it-works" 
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors py-2"
-                onClick={(e) => {
-                  e.preventDefault();
+              </button>
+              <button 
+                onClick={() => {
                   setIsMenuOpen(false);
                   scrollToSection('how-it-works');
                 }}
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors py-2 text-left"
               >
                 {t.nav.howItWorks}
-              </a>
+              </button>
               <Link 
                 to="/faq" 
                 className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors py-2"
@@ -122,17 +110,15 @@ export const Header = () => {
               >
                 {t.nav.faq}
               </Link>
-              <a 
-                href="#contact" 
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors py-2"
-                onClick={(e) => {
-                  e.preventDefault();
+              <button 
+                onClick={() => {
                   setIsMenuOpen(false);
                   scrollToSection('contact');
                 }}
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors py-2 text-left"
               >
                 {t.nav.contact}
-              </a>
+              </button>
               <div className="py-2">
                 <LanguageSwitcher />
               </div>
