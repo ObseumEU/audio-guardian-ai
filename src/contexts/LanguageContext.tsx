@@ -13,6 +13,7 @@ const translations = {
     nav: {
       features: 'Features',
       howItWorks: 'How It Works',
+      faq: 'FAQ',
       contact: 'Contact',
     },
     hero: {
@@ -137,6 +138,7 @@ const translations = {
     nav: {
       features: 'Funkce',
       howItWorks: 'Jak to funguje',
+      faq: 'Časté dotazy',
       contact: 'Kontakt',
     },
     hero: {

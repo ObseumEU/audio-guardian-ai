@@ -4,20 +4,32 @@ import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useState } from "react";
 import { ContactDialog } from "./ContactDialog";
+import { Link, useLocation } from "react-router-dom";
 
 export const Header = () => {
   const { t } = useLanguage();
+  const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showContactDialog, setShowContactDialog] = useState(false);
+
+  const isHomePage = location.pathname === '/';
+  
+  const scrollToSection = (sectionId: string) => {
+    if (!isHomePage) {
+      window.location.href = `/#${sectionId}`;
+      return;
+    }
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+  };
   
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
             <Disc3 className="w-8 h-8 text-primary" />
             <span className="text-xl font-bold">Audexia</span>
-          </div>
+          </Link>
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
@@ -26,7 +38,7 @@ export const Header = () => {
               className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
               onClick={(e) => {
                 e.preventDefault();
-                document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
+                scrollToSection('features');
               }}
             >
               {t.nav.features}
@@ -36,17 +48,23 @@ export const Header = () => {
               className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
               onClick={(e) => {
                 e.preventDefault();
-                document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
+                scrollToSection('how-it-works');
               }}
             >
               {t.nav.howItWorks}
             </a>
+            <Link 
+              to="/faq" 
+              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+            >
+              {t.nav.faq}
+            </Link>
             <a 
               href="#contact" 
               className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
               onClick={(e) => {
                 e.preventDefault();
-                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                scrollToSection('contact');
               }}
             >
               {t.nav.contact}
@@ -81,7 +99,7 @@ export const Header = () => {
                 onClick={(e) => {
                   e.preventDefault();
                   setIsMenuOpen(false);
-                  document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
+                  scrollToSection('features');
                 }}
               >
                 {t.nav.features}
@@ -92,18 +110,25 @@ export const Header = () => {
                 onClick={(e) => {
                   e.preventDefault();
                   setIsMenuOpen(false);
-                  document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
+                  scrollToSection('how-it-works');
                 }}
               >
                 {t.nav.howItWorks}
               </a>
+              <Link 
+                to="/faq" 
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t.nav.faq}
+              </Link>
               <a 
                 href="#contact" 
                 className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors py-2"
                 onClick={(e) => {
                   e.preventDefault();
                   setIsMenuOpen(false);
-                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                  scrollToSection('contact');
                 }}
               >
                 {t.nav.contact}
