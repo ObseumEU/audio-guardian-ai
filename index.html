@@ -18,5 +18,21 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script type="text/javascript">
+      (function () {
+        var scr = document.createElement('script');
+        scr.type = 'text/javascript';
+        scr.charset = 'UTF-8';
+        scr.async = true;
+        scr.src = '//app.mluvii.com/widget/OOWidget.js';
+        scr.$owidgetOnLoad = function (owidget) {
+          if (!owidget.isSupported) { return; }
+          owidget.init("4823d37b-45bc-47a1-b14a-ed3d143e43ba", null);
+          owidget.connectToServer();
+        };
+        var ffs = document.getElementsByTagName('script')[0];
+        ffs.parentNode.insertBefore(scr, ffs);
+      })();
+    </script>
   </body>
 </html>
