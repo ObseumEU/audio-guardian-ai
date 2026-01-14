@@ -62,6 +62,9 @@ export const Header = () => {
               {t.nav.contact}
             </button>
             <LanguageSwitcher />
+            <Button variant="outline" asChild>
+              <a href="https://audexia.obseum.cz/app/auth">{t.nav.login}</a>
+            </Button>
             <Button variant="hero" onClick={() => setShowContactDialog(true)}>
               {t.hero.requestDemo}
             </Button>
@@ -122,6 +125,11 @@ export const Header = () => {
               <div className="py-2">
                 <LanguageSwitcher />
               </div>
+              <Button variant="outline" className="w-full" asChild>
+                <a href="https://audexia.obseum.cz/app/auth" onClick={() => setIsMenuOpen(false)}>
+                  {t.nav.login}
+                </a>
+              </Button>
               <Button variant="hero" className="w-full" onClick={() => {
                 setShowContactDialog(true);
                 setIsMenuOpen(false);
