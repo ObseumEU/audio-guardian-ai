@@ -15,6 +15,7 @@ const translations = {
       howItWorks: 'How It Works',
       faq: 'FAQ',
       contact: 'Contact',
+      login: 'Login',
     },
     hero: {
       badge: 'AI-Powered Copyright Protection',
@@ -140,6 +141,7 @@ const translations = {
       howItWorks: 'Jak to funguje',
       faq: 'Časté dotazy',
       contact: 'Kontakt',
+      login: 'Přihlásit se',
     },
     hero: {
       badge: 'Detekce autorských práv pomocí AI',
